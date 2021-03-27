@@ -26,13 +26,13 @@ Using the multiple linear regression module it can predict mpg using Vehicle Len
 
 - The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.
 
-![Deliverable 2 - total_summary](Deliverable 2 - total_summary)
+![Deliverable 2 - total_summary](https://github.com/JimmyJ-D/MechaCar_Statistical_Analysis/blob/main/images/Deliverable%202%20-%20total_summary.png)
 
 - Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
 Using the summarize() function for the total_summary dataframe the get a variance of 62.29356. The total_summary variance does not exceed the 100 pounds per square inch MechaCar suspension coils dictates.
 
-![Deliverable 2 - lot_summary](Deliverable 2 - lot_summary)
+![Deliverable 2 - lot_summary](https://github.com/JimmyJ-D/MechaCar_Statistical_Analysis/blob/main/images/Deliverable%202%20-%20lot_summary.png)
 
 While total_summary variance is with the 100 pounds per square inch, we can use the groupby() and summarize() function to examine each of the three lots that are included in the total_summary dataframe. Lots 1 and 2 are with the 100 pounds per square inch variance at 0.9795 and 7.4693 respectfully. Lot 3 variance is 170.2861 pounds per square inch, this is 58.72% above the acceptable established level of 100 pounds per square inch.  
 
@@ -44,19 +44,19 @@ Using the T Test method we can examine the lots means against a given population
 
 Lot 1
 
-![ttest_lot1](ttest_lot1)
+![ttest_lot1](https://github.com/JimmyJ-D/MechaCar_Statistical_Analysis/blob/main/images/ttest_lot1.png)
 
 The lot 1, T Test produced a p-value of 1. The p-value is above our significance level of 0.05 percent. Therefore, we do not have sufficient evidence to reject the null hypothesis, and the two means are statistically similar.
 
 Lot 2
 
-![ttest_lot2](ttest_lot2)
+![ttest_lot2](https://github.com/JimmyJ-D/MechaCar_Statistical_Analysis/blob/main/images/ttest_lot2.png)
 
 The lot 2, T Test produced a p-value of 0.6072. The p-value is above our significance level of 0.05 percent. Therefor, we do not have sufficient evidence to reject the null hypothesis, and the two means are statistically similar.
 
 Lot 3
 
-![ttest_lot3](ttest_lot3)
+![ttest_lot3](https://github.com/JimmyJ-D/MechaCar_Statistical_Analysis/blob/main/images/ttest_lot3.png)
 
 The lot 3, T Test produced a p-value of 0.04168. The p-value is below our significance level of 0.05 percent. Therefore, we have sufficient evidence to reject the null hypothesis. The two means are not statistically similar.
 
