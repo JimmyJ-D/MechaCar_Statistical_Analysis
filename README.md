@@ -27,6 +27,7 @@ Using the multiple linear regression module it can predict mpg using Vehicle Len
 - The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.
  
 Total Summary Dataframe
+
 ![Deliverable 2 - total_summary](https://github.com/JimmyJ-D/MechaCar_Statistical_Analysis/blob/main/images/Deliverable%202%20-%20total_summary.png)
 
 - Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
@@ -35,6 +36,7 @@ Using the summarize() function for the total_summary dataframe we get a variance
 
 
 Lot 1-3 Dataframe
+
 ![Deliverable 2 - lot_summary](https://github.com/JimmyJ-D/MechaCar_Statistical_Analysis/blob/main/images/Deliverable%202%20-%20lot_summary.png)
 
 While total_summary variance is within the 100 pounds per square inch, we can use the groupby() and summarize() function to examine each of the three lots that are included in the total_summary dataframe. Lots 1 and 2 are within the 100 pounds per square inch variance at 0.9795 and 7.4693 respectfully. Lot 3 variance is 170.2861 pounds per square inch, this is 58.72% above the acceptable established level of 100 pounds per square inch.  
