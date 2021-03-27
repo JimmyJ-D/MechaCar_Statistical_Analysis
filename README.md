@@ -11,9 +11,9 @@ The variables that provided the non-random amount of variance in the linear regr
 
 - Is the slop of the linear model considered to be zero?
 - Why or why not?
-#ASK FOR HELP HERE NOT SURE
+
 P-value 5.35e-11 is 0.0000000000535
-The slope of the linear model is NOT zero. Our P-value is 5.35e-11, which converts to 0.0000000000535
+Our P-value is 5.35e-11, which converts to 0.0000000000535 or nearly zero. The slope of the linear model very near zero, but NOT zero. 
 
 - Does this linear model predict mpg of MechaCar prototypes effectively?
 - Why or why not?
@@ -25,16 +25,20 @@ Using the multiple linear regression module it can predict mpg using Vehicle Len
 
 
 - The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.
-
+ 
+Total Summary Dataframe
 ![Deliverable 2 - total_summary](https://github.com/JimmyJ-D/MechaCar_Statistical_Analysis/blob/main/images/Deliverable%202%20-%20total_summary.png)
 
 - Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
-Using the summarize() function for the total_summary dataframe the get a variance of 62.29356. The total_summary variance does not exceed the 100 pounds per square inch MechaCar suspension coils dictates.
+Using the summarize() function for the total_summary dataframe we get a variance of 62.29356. The total_summary variance does not exceed the 100 pounds per square inch MechaCar suspension coils dictates.
 
+
+Lot 1-3 Dataframe
 ![Deliverable 2 - lot_summary](https://github.com/JimmyJ-D/MechaCar_Statistical_Analysis/blob/main/images/Deliverable%202%20-%20lot_summary.png)
 
-While total_summary variance is with the 100 pounds per square inch, we can use the groupby() and summarize() function to examine each of the three lots that are included in the total_summary dataframe. Lots 1 and 2 are with the 100 pounds per square inch variance at 0.9795 and 7.4693 respectfully. Lot 3 variance is 170.2861 pounds per square inch, this is 58.72% above the acceptable established level of 100 pounds per square inch.  
+While total_summary variance is within the 100 pounds per square inch, we can use the groupby() and summarize() function to examine each of the three lots that are included in the total_summary dataframe. Lots 1 and 2 are within the 100 pounds per square inch variance at 0.9795 and 7.4693 respectfully. Lot 3 variance is 170.2861 pounds per square inch, this is 58.72% above the acceptable established level of 100 pounds per square inch.  
+
 
 
 ## T-Tests on Suspension Coils
@@ -52,7 +56,7 @@ Lot 2
 
 ![ttest_lot2](https://github.com/JimmyJ-D/MechaCar_Statistical_Analysis/blob/main/images/ttest_lot2.png)
 
-The lot 2, T Test produced a p-value of 0.6072. The p-value is above our significance level of 0.05 percent. Therefor, we do not have sufficient evidence to reject the null hypothesis, and the two means are statistically similar.
+The lot 2, T Test produced a p-value of 0.6072. The p-value is above our significance level of 0.05 percent. Therefore, we do not have sufficient evidence to reject the null hypothesis, and the two means are statistically similar.
 
 Lot 3
 
@@ -63,4 +67,4 @@ The lot 3, T Test produced a p-value of 0.04168. The p-value is below our signif
 
 ## Study Design: MechaCar vs Competition
 
-Today's car market have a large collection of vehicle to choose from. There are two drive, all wheel drive, heavy duty truck, light trucks, SUVs, and hybrid to name a just a few.  If would be beneficial to MechaCar to compare MPG and vehicle total weight across large real-world numerical means. We can deploy the ANOVA to compare the means of a continuous numerical variables across a number of groups or (or vehicle types). MechaCar would need car data like MPG and vehicle weight from its competitors to included (weight with batteries for hybrid). The ANOVA can be used in multiple ways. The one-way ANOVA is used to ttest the means of a single dependent variable across a single independent variable with multiple groups. We want to reject the null hypothesis that there is not a difference between MechaCar and its competition. 
+Today's car market have a large collection of vehicle to choose from. There are two drive, all wheel drive, heavy duty truck, light trucks, SUVs, and hybrid to name a just a few.  If would be beneficial to MechaCar to compare MPG and vehicle total weight across large real-world numerical means. We can deploy the ANOVA to compare the means of a continuous numerical variables across a number of groups or (or vehicle types). MechaCar would need car data like MPG and vehicle weight from its competitors to included (weight with EV batteries for hybrid). The ANOVA can be used in multiple ways. The one-way ANOVA is used to ttest the means of a single dependent variable across a single independent variable with multiple groups. We want to reject the null hypothesis that there is not a difference between MechaCar and its competition. 
